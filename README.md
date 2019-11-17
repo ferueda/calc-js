@@ -1,16 +1,16 @@
 # calc-js
 
-Calculator using vanilla HTML, CSS and JS.
+## Calculator using vanilla HTML, CSS and JS.
 
-Technology used:
+**Technology used:**
 
 CSS:
 
--Flexbox
--Grid
+- Flexbox
+- Grid
 
 JS:
 
--Classes
--OOP
--Functions
+- Classes
+- OOP
+- Functions
