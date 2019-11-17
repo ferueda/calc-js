@@ -1,0 +1,111 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  font-size: 26px;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/*------------------------------------*\
+  #CALCULATOR STYLES
+\*------------------------------------*/
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: lightgrey;
+}
+
+.calc {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+  grid-gap: 2px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.calc > button {
+  outline: none;
+  color: rgba(255, 255, 255);
+  background: rgba(0, 0, 0, 0.85);
+  border: none;
+}
+
+.calc > button:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.calc > button:active {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.calc > .util {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.back-icon {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.calc__output {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: rgba(255, 255, 255);
+}
+
+.calc__prev-output {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.calc__cur-output {
+  font-size: 2rem;
+}
