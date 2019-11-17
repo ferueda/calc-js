@@ -107,5 +107,5 @@ a:not([class]) {
 }
 
 .calc__cur-output {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
