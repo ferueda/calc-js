@@ -115,3 +115,29 @@ operationsBtns.forEach(button => button.addEventListener("click", printOp));
 clearBtn.addEventListener("click", clearOutput);
 deleteBtn.addEventListener("click", deleteNum);
 equalBtn.addEventListener("click", printResult);
+
+window.addEventListener("keydown", function(e) {
+  console.log(e.key);
+  if (!isNaN(e.key)) {
+    calculator.addNumber(e.key);
+    calculator.updateDisplay();
+  } else if (e.key === "/") {
+    calculator.addOperation("÷");
+    calculator.updateDisplay();
+  } else if (e.key === "*") {
+    calculator.addOperation("x");
+    calculator.updateDisplay();
+  } else if (e.key === "+" || e.key === "-") {
+    calculator.addOperation(e.key);
+    calculator.updateDisplay();
+  } else if (e.key === "Enter") {
+    calculator.evaluate();
+    calculator.updateDisplay();
+  } else if (e.key === "Escape") {
+    calculator.clear();
+    calculator.updateDisplay();
+  } else if (e.key === "Backspace") {
+    calculator.delete();
+    calculator.updateDisplay();
+  }
+});
