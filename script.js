@@ -117,7 +117,6 @@ deleteBtn.addEventListener("click", deleteNum);
 equalBtn.addEventListener("click", printResult);
 
 window.addEventListener("keydown", function(e) {
-  console.log(e.key);
   if (!isNaN(e.key)) {
     calculator.addNumber(e.key);
     calculator.updateDisplay();
