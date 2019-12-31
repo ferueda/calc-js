@@ -46,7 +46,7 @@ class Calculator {
         result = prev + curr;
         break;
       case "-":
-        result = prev + curr;
+        result = prev - curr;
         break;
       default:
         return;
@@ -116,7 +116,7 @@ clearBtn.addEventListener("click", clearOutput);
 deleteBtn.addEventListener("click", deleteNum);
 equalBtn.addEventListener("click", printResult);
 
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", (e) => {
   if (!isNaN(e.key)) {
     calculator.addNumber(e.key);
     calculator.updateDisplay();
