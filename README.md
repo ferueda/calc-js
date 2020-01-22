@@ -15,4 +15,3 @@ JS:
 
 - Classes
 - OOP
-- Functions
